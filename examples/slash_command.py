@@ -10,6 +10,7 @@ import discord
 # アクセストークンを設定
 dotenv.load_dotenv()
 token = str(os.getenv("TOKEN"))
+guild_id = str(os.getenv("GUILD_ID"))
 
 bot = discord.Bot()
 
@@ -17,7 +18,7 @@ bot = discord.Bot()
 async def on_ready():
     print(f"We have logged in as {bot.user}")
 
-@bot.slash_command(guild_ids=[1164754195535102112])
+@bot.slash_command(guild_ids=[guild_id])
 async def hello(ctx: discord.ApplicationContext):
     await ctx.respond("Hello!")
 
