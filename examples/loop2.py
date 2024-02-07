@@ -14,7 +14,7 @@ gasurl = str(os.getenv("GASURL"))
 url = gasurl
 
 # channelid
-channelid = str(os.getenv("CHANNELID"))
+channelid = str(os.getenv("CHANNEL_ID"))
 
 # Botの大元となるオブジェクトを生成する
 bot = discord.Bot(
